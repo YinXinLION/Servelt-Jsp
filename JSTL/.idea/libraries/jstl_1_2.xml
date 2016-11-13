@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jstl-1.2">
+    <CLASSES>
+      <root url="jar:///opt/apache-tomcat-8.0.36/lib/jstl-1.2.jar!/" />
+      <root url="jar:///opt/apache-tomcat-8.0.36/lib/servlet-api.jar!/" />
+      <root url="jar:///opt/apache-tomcat-8.0.36/lib/jsp-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
