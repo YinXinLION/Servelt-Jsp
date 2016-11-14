@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="struts2">
+    <CLASSES>
+      <root url="file:///opt/apache-tomcat-8.0.36/lib/struts2" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file:///opt/apache-tomcat-8.0.36/lib/struts2" recursive="false" />
+  </library>
+</component>

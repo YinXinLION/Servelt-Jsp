@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="org.crazyit.app" extends="struts-default">
+        <action name="login" class="org.crazyit.app.action.LoginAction">
+            <result>/WEB-INF/content/welcome.jsp</result>
+            <result name="error">./welcome.jsp</result>
+        </action>
+
+
+        <action name="asd" class="org.crazyit.app.action.LoginAction1">
+            <result>/WEB-INF/content/welcome.jsp</result>
+            <result name="error">./welcome.jsp</result>
+        </action>
+        <action name="*">
+            <result>./{1}.jsp</result>
+        </action>
+
+        <action name="upload" class="org.crazyit.app.action.UploadAction">
+            <param name="savePath">/uploadFiles</param>
+            <result>succ.jsp</result>
+        </action>
+    </package>
+</struts>
