@@ -89,7 +89,7 @@ public class UploadAction extends ActionSupport
 	{
 		// 以服务器的文件保存地址和原文件名建立上传文件输出流
 		FileOutputStream fos = new FileOutputStream(getSavePath()
-				+ "\\" + getUploadFileName());
+				+ "/" + getUploadFileName());
 		FileInputStream fis = new FileInputStream(getUpload());
 		byte[] buffer = new byte[1024];
 		int len = 0;
