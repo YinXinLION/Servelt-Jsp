@@ -28,8 +28,8 @@ public class LoginAction1 extends ActionSupport
     }
     public String execute() throws Exception
     {
-        if (getUser().getName().equals("crazyit.org")
-                && getUser().getPass().equals("leegang") )
+        if (getUser().getName().equals("lion")
+                && getUser().getPass().equals("111") )
         {
             addActionMessage("登录成功！");
             return SUCCESS;

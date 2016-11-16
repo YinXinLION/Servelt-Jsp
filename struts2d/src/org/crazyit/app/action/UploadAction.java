@@ -30,6 +30,17 @@ public class UploadAction extends ActionSupport
 	private String uploadFileName;
 	// 直接在struts.xml文件中配置的属性
 	private String savePath;
+	// 定义该Action允许上传的文件类型
+	private String allowTypes;
+	// allowTypes的setter和getter方法
+	public String getAllowTypes()
+	{
+		return allowTypes;
+	}
+	public void setAllowTypes(String allowTypes)
+	{
+		this.allowTypes = allowTypes;
+	}
 	// 接受struts.xml文件配置值的方法
 	public void setSavePath(String value)
 	{
@@ -100,4 +111,37 @@ public class UploadAction extends ActionSupport
 		fos.close();
 		return SUCCESS;
 	}
+//	/**
+//	 * 过滤文件类型
+//	 * @param types 系统所有允许上传的文件类型
+//	 * @return 如果上传文件的文件类型允许上传，返回null
+//	 *		   否则返回error字符串
+//	 */
+//	public String filterTypes(String[] types)
+//	{
+//		// 获取允许上传的所有文件类型
+//		String fileType = getUploadContentType();
+//		for (String type : types)
+//		{
+//			if (type.equals(fileType))
+//			{
+//				return null;
+//			}
+//		}
+//		return ERROR;
+//	}
+//
+//	// 执行输入校验
+//	public void validate()
+//	{
+//		// 将允许上传文件类型的字符串以英文逗号（,）
+//		// 分解成字符串数组从而判断当前文件类型是否允许上传
+//		String filterResult = filterTypes(getAllowTypes().split(","));
+//		// 如果当前文件类型不允许上传
+//		if (filterResult != null)
+//		{
+//			// 添加FieldError
+//			addFieldError("upload" , "您要上传的文件类型不正确！");
+//		}
+//	}
 }
