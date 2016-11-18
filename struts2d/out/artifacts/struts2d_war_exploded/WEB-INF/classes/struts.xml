@@ -8,8 +8,19 @@
     <constant name="struts.custom.i18n.resources" value="mess"/>
     <!--  设置该应用使用的字符集  -->
     <constant name="struts.i18n.encoding" value="UTF-8"/>
+
     <package name="org.crazyit.app" extends="struts-default">
+        <interceptors>
+            <interceptor name="mySimple" class="org.crazyit.app.interceptor.SimpleInterceptor">
+                <param name="name">简单拦截器</param>
+            </interceptor>
+        </interceptors>
+
         <action name="login" class="org.crazyit.app.action.LoginAction">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="mySimple">
+                <param name="name">改名后的拦截器</param>
+            </interceptor-ref>
             <result>/WEB-INF/content/welcome.jsp</result>
             <result name="error">./welcome.jsp</result>
         </action>
@@ -78,7 +89,14 @@
         </action>
 
 
+        <action name="login3" class="org.crazyit.app.action.LoginAction3">
+            <result type="stream">
+                <param name="contentType">text/html</param>
+                <param name="inputName">result</param><!--入口-->
+            </result>
 
+
+        </action>
 
     </package>
 </struts>
